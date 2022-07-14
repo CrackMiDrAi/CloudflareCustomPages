@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+		<meta name="robots" content="noindex, nofollow" />
+		<meta http-equiv="refresh" content="12">
+		<meta name="viewport" content="width=device-width" />
+		<link href="./style.css" rel="stylesheet"></link>
+		<script src="./loadingAnime.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div id="div-cf-container" style="display:none">
+				<div class="loading-anime" id="div-loading-anime"></div>
+				<div class="messages">
+					<h1>检测到可疑活动！</h1>
+					<hr />
+					<p>正在检查你的网络环境，请稍等片刻哦！</p>
+					<p>出现这种提示的原因可能是因为有人在你的网络环境里偷偷做了奇怪的事，或是网站所有者强制要求验证每一个访客。</p>
+					<p>不用担心！如果你是好人，只需等一下就可以去到你想去的地方！</p>
+					<hr />
+					<p id="cf-spinner-allow-5-secs">正在检测中，请再等一下下哦</p>
+					<p id="cf-spinner-redirecting" style="display:none">检测通过！正在前往目标站点...</p>
+				</div>
+			</div>
+			<div style="display:none;">::IM_UNDER_ATTACK_BOX::</div>
+			<script>
+				(() =>
+				{
+					document.getElementById('div-cf-container').style.display = 'block';
+					CreateLoadingAnime(document.querySelector('#div-loading-anime'));
+				})();
+			</script>
+			<hr />
+			<div class="user-info">
+				Protected by <a rel="noopener noreferrer" href="https://www.cloudflare.com/5xx-error-landing/" target="_blank">Cloudflare</a><br />
+				Ray ID: <code>::RAY_ID::</code><br />
+				IP: <code>:::CLIENT_IP::</code>&nbsp;<code>::GEO::</code>
+			</div>
+		</div>
+	</body>
+</html>
